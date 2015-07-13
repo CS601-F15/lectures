@@ -29,8 +29,7 @@ The basic submission process is as follows:
 5. Once all tests cases are passing and code passes initial instructor review, student receives a Slack message with a link to sign up for code review. In exceptional cases, the instructor may allow a student to be exempt from a particular code review.
 6. Student and instructor meet for code review session. Failure to attend a scheduled code review may result in a deduction on the assignment.
 7. Instructor provides comments and *may* require student to repeat steps 1-6. 
-8. Once all tests cases pass and instructor is satisfied with code quality, student receives 100% on assignment and may move on to next assignment.
-
+8. Once all tests cases pass and instructor is satisfied with code quality, student may move on to next assignment. In most cases, the student will receive 100% upon demonstrating mastery, however the instructor retains the right to apply deductions as described below.
 
 Follow the [instructions for using Github](environment.md) to make sure you have uploaded your code correctly.
 
