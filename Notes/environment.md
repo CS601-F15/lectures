@@ -9,15 +9,15 @@ Getting Started
 - [Submission](#submission)
 
 ##Eclipse
-Make sure you are using Eclipse Luna and that it is configured to use Java 8.
+Make sure you are using Eclipse Mars and that it is configured to use Java 8.
 
-1. Download [Eclipse here](https://eclipse.org/)
+1. Download [Eclipse here](https://eclipse.org/). Select the Eclipse IDE for Java Developers.
 2. Download [Java 8 here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 3. Make sure that Eclipse is configured correctly. `Eclipse > Preferences > Java > Compiler` should show a "Compiler compliance level" of 1.8 and `Installed JREs` should show Java SE 8. See the professor if you need help with this.
 
 
 ##Github
-Install either [Github for Mac](https://mac.github.com/) or [Github for Windows](https://windows.github.com/). If you are a Linux user, feel free to use the command line. There are lots of other equivalent tools, but we'll help you out with these. Eclipse also has some integrated support, but you will need to do a few things that aren't easy to do with Eclipse directly. Get used to the command line or a separate tool.
+Install [Github Desktop](https://desktop.github.com/). If you are a Linux user, feel free to use the command line. There are lots of other equivalent tools, but we'll help you out with these. Eclipse also has some integrated support, but you will need to do a few things that aren't easy to do with Eclipse directly. Get used to the command line or a separate tool.
 
 The instructor will create for you private repositories for all of the work you will submit in this class. You should *always* first `clone` or `pull` (that is `update` in SVN terms) the appropriate repository before beginning work. In addition, if the instructor has reviewed your code you must make sure to `pull` any comments or changes *before you make changes*. If you do not, this will lead to unending headache (trust me on this one!).
 
@@ -45,7 +45,7 @@ Commit your changes to Github *early and often*. You should *not* use Github as 
 ###Using the Github Tool
 1. On the `Changes` screen, select all of the files you wish to commit. This should *not* include classfiles or metadata, but should include any new Java files you have implemented, and any Java or other files you have changed. 
 2. In the `Summary` enter a short, meaningful description of the change. Do *not* enter messages such as "commit 1", "commit 2". *DO* enter messages such as "Completed YelpStore addReview". In the `Description` box provide a more detailed description of the change you have made in this version of the code. 
-3. Click `Commit`. 
+3. Click `Commit to master`. 
 4. Click `Sync` at the top right corner.
 5. Congratulations! Your changes should be available on Github.
 
