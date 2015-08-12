@@ -1,9 +1,34 @@
 Data Structures Review
 ======================
 
+Understanding data structures and when and how to use them efficiently is extremely important.
 
+In CS 673 you will learn more about implementation strategies. In CS 601 we will focus more on choosing the right data structure to solve a particular problem.
+
+The [Java Collections Framework](https://docs.oracle.com/javase/tutorial/collections/index.html) provides implementations of sets, lists, maps, and several other common data structures.
+
+The [API Specification](http://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collections.html) provides information about the running time of common operations as outlined below.
+
+| Data Structure | Operation | Running Time | Notes |
+|:---|:---|:---|:---|
+| ArrayList | `size`, `isEmpty`, `get`, `set`, `iterator` | O(1)| | 
+| | `add` | *amortized constant time* | Adding n elements requires O(n) time.| 
+| | all other operations (`contains`, `indexOf`) | O(n) | | 
+| LinkedList | | | Implemented as a doubly-linked list. | 
+| HashMap | `get`, `put` | O(1) | Initial capacity and load factor influence performance. | 
+|  | iteration | O(n) | | 
+| TreeMap | `get`, `put`, `remove`, `containsKey` | O(long(n)) | |
+| LinkedHashMap |`add`, `remove`, `contains` | O(1)| Elements are ordered by insertion order. |
+| HashSet | `add`, `remove`, `contains`, `size` | O(1) | Does not guarantee order of elements over time. |
+| | iteration | O(n) + number of buckets of backing HashMap instance |
+| TreeSet | `add`, `remove`, `contains` | O(log(n))| Guarantees elements are sorted. |
+| LinkedHashSet | `add`, `remove`, `contains` | O(1)| Elements are ordered by insertion order. *Performance is likely to be just slightly below that of HashSet, due to the added expense of maintaining the linked list, with one exception: Iteration over a LinkedHashSet requires time proportional to the size of the set, regardless of its capacity. Iteration over a HashSet is likely to be more expensive, requiring time proportional to its capacity.* |
 
 ## Exercise
+
+Consider a program that reads in a file, processes the file to extract appropriate data, and stores the result in a data structure that may be queried as described below.
+
+Describe the design of the data structure you will use to store the result of processing the file in order to efficiently implement the methods described below, as well as efficiently implement the processing of the file.
 
 ```java
 /**
