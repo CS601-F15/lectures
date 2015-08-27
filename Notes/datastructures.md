@@ -17,7 +17,7 @@ The [API Specification](http://docs.oracle.com/javase/8/docs/api/index.html?java
 | LinkedList | | | Implemented as a doubly-linked list. | 
 | HashMap | `get`, `put` | O(1) | Initial capacity and load factor influence performance. | 
 |  | iteration | O(n) | | 
-| TreeMap | `get`, `put`, `remove`, `containsKey` | O(lon(n)) | |
+| TreeMap | `get`, `put`, `remove`, `containsKey` | O(log(n)) | |
 | LinkedHashMap |`add`, `remove`, `contains` | O(1)| Elements are ordered by insertion order. |
 | HashSet | `add`, `remove`, `contains`, `size` | O(1) | Does not guarantee order of elements over time. |
 | | iteration | O(n) |
