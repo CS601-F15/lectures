@@ -35,14 +35,6 @@ Keep it simple, silly. Avoid overcomplicated algorithms or implementations when 
 
 You aren't gonna need it. Do not add functionality until it is deemed absolutely necessary.
 
-[**SOLID**](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
-
-- S - Single responsibility principle. A class should have only a single responsibility. 
-- O - Open/closed principle. “software entities … should be open for extension, but closed for modification.” You should be able to extend the behavior of an entity without changing its source code.
-- L - Liskov substitution principle. “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.”
-- I - Interface segregation principle. “many client-specific interfaces are better than one general-purpose interface.” This principle dictates that a client should not be foreced to depend upon methods it does not use.
-- D - Dependency inversion principle. “Depend upon Abstractions. Do not depend upon concretions.”
-
 ### Coding Style
 
 You will be expected to follow the style standards here: [Google Java Style](http://google.github.io/styleguide/javaguide.html)

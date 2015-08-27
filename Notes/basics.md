@@ -17,6 +17,11 @@ Give an example of a checked exception.
 
 Give an example of an unchecked exception.
 
+##Other terminology
+
+Explain *overloading* and *overriding*.
+
+
 ##Static
 
 Which of the following two programs will result in an error? Why?
