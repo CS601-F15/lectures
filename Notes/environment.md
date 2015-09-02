@@ -30,11 +30,12 @@ Your repository names will use the following naming convention: `<github_usernam
 4. Once you click `Clone` the data will be downloaded and you should be able to use `Finder` or `Explorer` to see it. The Github tool will show you *only* the files that have been changed locally and not pushed to Github. It will not list all files.
 
 ##Loading Projects into Eclipse
-1. Open Eclipse specifying the local directory indicated in step 3 under Using the Github Tool (e.g., `/Users/srollins/cs601`).
-2. Right-click under the `Package Explorer` and select `Import`.
-3. Choose `General > Existing Projects into Workspace`.
-4. Select the root directory as the directory created by the Github tool (e.g., `/Users/srollins/cs601/srollins-labs`).
-5. Select all of the projects you wish to import and click `Finish`.
+1. Open Eclipse specifying the directory created by the Github tool (e.g., `/Users/srollins/cs601/srollins-labs`). Make sure to select the `<username>/labs` repository.
+2. Right-click under the `Package Explorer` and select `New > Java Project`.
+3. In the `Project name:` field, type `CS601Labs`. Make sure to specify this exactly as it will see that there is a directory with this name and automatically import its contents.
+4. Click `Finish`.
+5. Modify your build path to include JUnit by right-clicking on the project folder, selecting `Build Path > Add Libraries`, then selecting `JUnit`. 
+6. You're done!
 
 ##Pulling Down New Projects
 The instructor may add new projects to your repositories as new work is assigned. In the Github tool, simply `Sync` to pull down the latest updates from github. Then, follow the steps listed in the [Loading Projects into Eclipse](#loading-projects-into-eclipse) section to load the projects into Eclipse and begin work.
