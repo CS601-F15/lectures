@@ -26,13 +26,17 @@ public class HTTPServer {
 				message += line + "\n";
 				line = instream.readLine();
 			}
-			System.out.println("Request: " + message);
+			System.out.println("Request: \n" + message);
+			
+			String headers = "HTTP/1.0 200 OK\n" +
+						"\r\n";
 			
 			String page = "<html> " + 
 						"<head><title>TEST</title></head>" + 
 					    "<body>This is a short test page.</body>" + 
 						"</html>";
 			
+			writer.write(headers);
 			writer.write(page);
 			writer.flush();
 		} catch(IOException ioe) {
