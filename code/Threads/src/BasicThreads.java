@@ -18,12 +18,8 @@ public class BasicThreads {
 		/* TBD: using join */
 		try {
 		
-			
-			
 			t1.join();
 			t2.join();
-
-		
 		
 		} catch (InterruptedException e) {
 			e.printStackTrace();

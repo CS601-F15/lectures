@@ -1,29 +1,36 @@
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class SharedDataStructure {
 
 	private List<Integer> numbers;
-	//private ReentrantReadWriteLock lock;
-	
+	private ReentrantReadWriteLock lock;
+
 	public SharedDataStructure() {
 		this.numbers = new ArrayList<Integer>();
-		//this.lock = new ReentrantReadWriteLock();
+		this.lock = new ReentrantReadWriteLock();
 	}
-	
-	/* TBD: use of the synchronized keyword */
+
 	public void addNumber(int number) {
-		//lock write
-		//lock.writeLock().lock();
-		this.numbers.add(number);
-		//unlock write
-		//lock.writeLock().unlock();
+		try {
+			lock.writeLock().lock();
+			this.numbers.add(number);
+		} finally {
+			lock.writeLock().unlock();
+		}
 	}	
 
-	public  int size() {
-		//lock read
-		return this.numbers.size();
-		//unlock read
+	public int size() {
+
+		try {
+			lock.readLock().lock();
+			return this.numbers.size();
+		} finally {
+			lock.readLock().unlock();
+		}
+
+
 	}
+
 }

@@ -13,7 +13,7 @@ public class SimpleClient {
 			
 			out.println("My message!");
 			out.println("EOT");
-			out.flush();
+//			out.flush();
 			
 		} catch(IOException ioe) {
 			ioe.printStackTrace();

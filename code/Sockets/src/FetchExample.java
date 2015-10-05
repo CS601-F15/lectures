@@ -15,7 +15,7 @@ public class FetchExample {
 	}
  
 	public static ArrayList<String> mystery2(String page) {
-		
+				
 		String REGEX = "(?is)(<\\s*a\\s+[^>]*href\\s*=\\s*\")(.+?)(\")";
 
 		int GROUP = 2;
@@ -37,9 +37,15 @@ public class FetchExample {
 
 	public static void main(String[] args) {
 
-//		String page = HTTPFetcher.download("www.cs.usfca.edu", "/~srollins/test.html");		
-//		System.out.println(page);
-
+		String page = HTTPFetcher.download("www.cs.usfca.edu", "/~srollins/test.html");
+		
+		System.out.println(page);
+		System.out.println("******");
+		System.out.println(mystery1(page));
+		
+		
+		
+		
 //		URL url = null;
 //		try {
 //			url = new URL("http://www.yelp.com/biz/bursa-san-francisco");			
@@ -47,6 +53,7 @@ public class FetchExample {
 //			e.printStackTrace();
 //		}
 //		String page = HTTPFetcher.download(url.getHost(), url.getPath());
+//		System.out.println(page);
 //		
 //		System.out.println(mystery1(page));
 //		
