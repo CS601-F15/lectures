@@ -1,18 +1,18 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.istack.internal.logging.Logger;
 
 
 public class HelloServlet extends HttpServlet {
 
 	
-	private Logger logger = Logger.getLogger(HelloServlet.class);
+	private Logger logger = Logger.getLogger(HelloServlet.class.getName());
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 			
@@ -28,7 +28,7 @@ public class HelloServlet extends HttpServlet {
                 
 		PrintWriter out = response.getWriter();
 		
-		out.println("<html><title>HelloServlxet</title><body>Hello, " + name + "!<br/>Thanks for visiting</body></html>");
+		out.println("<html><title>HelloServlet</title><body>Hello, " + name + "!<br/>Thanks for visiting</body></html>");
 		
 	}
 	
