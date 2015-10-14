@@ -175,6 +175,10 @@ DROP TABLE phone;
 
 ```
 
+### Additional Resources
+
+- [w3schools SQL Tutorial](http://www.w3schools.com/sql/default.asp)
+
 ### Using JDBC	
 
 JDBC allows you to connect to an SQL database from Java code.
