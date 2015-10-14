@@ -179,8 +179,7 @@ DROP TABLE phone;
 
 JDBC allows you to connect to an SQL database from Java code.
 
-See the following example: [JDBC](https://github.com/CS212-S15/lectures/tree/master/JDBC)
-
+See the following example: [JDBC](https://github.com/CS601-F15/lectures/tree/master/code/JDBC)
 
 ### Creating an ssh tunnel
 
