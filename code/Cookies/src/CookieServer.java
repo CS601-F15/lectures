@@ -1,4 +1,11 @@
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
 
@@ -9,6 +16,8 @@ public class CookieServer {
 	 */
 	public static void main(String[] args) throws Exception {
 		
+		Logger logger = Logger.getLogger(CookieServer.class.getName());
+		
 		//Example from http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html
 		
 		
@@ -18,23 +27,19 @@ public class CookieServer {
         // or programmatically obtain it for use in test cases.
         Server server = new Server(8080);
  
-        // The ServletHandler is a dead simple way to create a context handler
-        // that is backed by an instance of a Servlet.
-        // This handler then needs to be registered with the Server object.
-        ServletHandler handler = new ServletHandler();
-        server.setHandler(handler);
-        
-        // Passing in the class for the Servlet allows jetty to instantiate an
-        // instance of that Servlet and mount it on a given context path.
+        ServletContextHandler servhandler = new ServletContextHandler(ServletContextHandler.SESSIONS);        
+        server.setHandler(servhandler);
  
-        // IMPORTANT:
-        // This is a raw Servlet, not a Servlet that has been configured
-        // through a web.xml @WebServlet annotation, or anything similar.
-        handler.addServletWithMapping(CookieServlet.class, "/cookies");
-        System.out.println("Starting cookie server...");
+        servhandler.addServlet(CookieServlet.class, "/cookies");
+        servhandler.addServlet(SessionServlet.class, "/session");
+
+        //set the list of handlers for the server
+        server.setHandler(servhandler);
+        logger.log(Level.INFO, "Starting cookie server...");
         
         // Start things up!
         server.start();
+        logger.log(Level.INFO, "Cookie server started...");
  
         // The use of server.join() the will make the current thread join and
         // wait until the server is done executing.

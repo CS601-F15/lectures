@@ -19,35 +19,56 @@ public class CookieServlet extends HttpServlet {
 		
 		Cookie[] cookies = request.getCookies();
 
-		String name = null;
+		int userID = -1;
+		boolean newUser = false;
 		
+		//determine whether we've seen this user before
 		if(cookies != null) {
-			//for each cookie, if the key is name, store the value
 			for(Cookie c: cookies) {
-				System.out.println(c);
-				 
+				if(c.getName().equals("userID")) {
+					userID = Integer.parseInt(c.getValue());
+					logger.log(Level.INFO, "Existing user: " + userID);			
+				}
 			}
 		}
-		Cookie c = new Cookie("user", "1234");
-		response.addCookie(c);
 		
-//		String name = request.getParameter("name");
-//		if(name == null) {
-//			name = "anonymous";
-//		}		
-//
-//		logger.log(Level.INFO, "Request from: " + name);
+		//new user
+		if(userID == -1) {
+			newUser = true;
+			userID = UserData.getNextUserID();
+			Cookie c = new Cookie("userID", String.valueOf(userID));
+			response.addCookie(c);
+			logger.log(Level.INFO, "New user: " + userID);			
+		}
+		
 		
 		response.setContentType("text/html");
         response.setStatus(HttpServletResponse.SC_OK);
                 
 		PrintWriter out = response.getWriter();
 		
-		String responseStr = "";
+		String title = "Cookie Servlet";
+		String bootstrapHeader = "<!DOCTYPE html>" +
+				"<html lang=\"en\">\n" +
+				"	<head>\n" +
+				"		<title>" + title + "</title>\n" +
+				"		<meta charset=\"utf-8\">\n" +
+				"		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
+				"		<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n" +
+				"		<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>\n" +
+				"		<script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>\n" +
+				"	</head>\n";
+
+		String body = "	<body>\n" +
+						"		<div class=\"container\">\n" +	
+						"			<p>Hello, "  + (newUser?"new":"existing") + " user!</p>\n" +
+						"		</div>\n" +
+						"	</body>\n";
+
+		String footer = "</html>";
 		
-		out.println(responseStr);
-		
+		String page = bootstrapHeader + body + footer;					
+		out.println(page);		
 	}
-	
 	
 }
