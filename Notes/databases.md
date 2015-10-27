@@ -61,7 +61,7 @@ mySQL runs on the host `sql.cs.usfca.edu`.
 
 Your servlets (or any other Java program) will use Java Database Connectivity (JDBC) to connect to the database from your Java code.
 
-[Database assignments](dbassignments.md) lists the username and database you may use for your coursework.
+[Database assignments](https://github.com/CS601-F15/projects/blob/master/sqlassigns.md) lists the username and database you may use for your coursework.
 
 Your initial password is the same as your username, and you will use a database of the same name.
 
