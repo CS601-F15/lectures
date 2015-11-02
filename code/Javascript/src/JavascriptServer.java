@@ -24,9 +24,9 @@ public class JavascriptServer {
  
         ServletContextHandler servhandler = new ServletContextHandler(ServletContextHandler.SESSIONS);        
  
-//        servhandler.addServlet(ClientSideServlet.class, "/clientside");
         servhandler.addServlet(SPAServlet.class, "/spa");
 
+        //This is how to serve static pages using servlets!
         ResourceHandler resource_handler = new ResourceHandler();
         resource_handler.setDirectoriesListed(true);
 
