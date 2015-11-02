@@ -142,9 +142,9 @@ CREATE TABLE user (id INTEGER NOT NULL PRIMARY KEY, name VARCHAR(50) NOT NULL);
 DESCRIBE user;
 
 INSERT INTO user (id, name) VALUES (1, "Bob");
-INSERT INTO user VALUES (2, "Sally”), (3, "Andy");
+INSERT INTO user VALUES (2, "Sally"), (3, "Andy");
 
-CREATE TABLE phone (id INTEGER NOT NULL PRIMARY KEY, phone VARCHAR(50) NOT NULL, description VARCHAR(50) NOT NULL);
+CREATE TABLE phone (id INTEGER NOT NULL, phone VARCHAR(50) NOT NULL, description VARCHAR(50) NOT NULL);
 
 INSERT INTO phone VALUES (1, "111-111-1111", "Work"), (2, "222-222-2222", "Cell"), (6, "333-333-3333", "Home");
 
