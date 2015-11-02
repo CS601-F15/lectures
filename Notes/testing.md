@@ -154,3 +154,8 @@ Of course, arguably the most challenging element of testing is writing good test
 Often, the number of lines of test code will exceed the number of lines of code being tested. In some cases, you may see 5x more test code than non-test code. 
 
 Writing tests helps to enforce better design. If you have a hard time writing good test cases, you may want to rethink your original code.
+
+### Exercise
+
+- Identify the ten software applications you think are most important (either in general, or for you).
+- For each, do you think agile would be an appropriate software development methodology?
