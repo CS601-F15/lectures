@@ -74,9 +74,9 @@ Many (maybe most) companies these days use some flavor of agile development. In 
 The main tenets of agile are as follows:
 
 - Individuals and interactions over processes and tools
-- Working softare over comprehensive documentation
+- Working software over comprehensive documentation
 - Customer collaboration over contract negotiation
-- Responding to change over following a plan.
+- Responding to change over following a plan
 
 
 ### Test-Driven Development
