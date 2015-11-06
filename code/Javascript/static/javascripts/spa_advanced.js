@@ -1,3 +1,4 @@
+//http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp
 function updatePage(){	
 	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
